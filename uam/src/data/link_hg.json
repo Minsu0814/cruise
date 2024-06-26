@@ -46,5 +46,29 @@
 	{
 		"source": "HG007_JP2",
 		"target": "HG007_JP3"
+	},
+	{
+		"source": "HG007_JP3",
+		"target": "HG008"
+	},
+	{
+		"source": "HG008",
+		"target": "HG009"
+	},
+	{
+		"source": "HG009",
+		"target": "HG009_v"
+	},
+	{
+		"source": "HG009_v",
+		"target": "HG011"
+	},
+	{
+		"source": "HG011",
+		"target": "HG010"
+	},
+	{
+		"source": "HG010",
+		"target": "HG007_JP3"
 	}
 ]
