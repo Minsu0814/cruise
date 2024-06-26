@@ -1,5 +1,25 @@
 [
 	{
+		"source": "HG001_v",
+		"target": "HG001"
+	},
+	{
+		"source": "HG001",
+		"target": "HG002"
+	},
+	{
+		"source": "HG002",
+		"target": "HG003"
+	},
+	{
+		"source": "HG003",
+		"target": "HG004"
+	},
+	{
+		"source": "HG004",
+		"target": "HG001_v"
+	},
+	{
 		"source": "HG003",
 		"target": "HG005"
 	},
