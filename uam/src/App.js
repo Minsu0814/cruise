@@ -30,34 +30,30 @@ const App = () => {
 
   const getData = useCallback(async () => {
     // const ICON = await fetchData("icon_data");
-    const TRIP = await fetchData("trips");
+    const TRIP = await fetchData("trip");
     const BUILDING = await fetchData("buildings");
     const BUILDING_VERTIPORT = await fetchData("building_vertiport");
 
     const NODES = await Promise.all([
       fetchData("node_ar"),
-      fetchData("node_tc"),
-      fetchData("node_hg"),
+      // fetchData("node_tc"),
+      // fetchData("node_hg"),
     ]);
 
     const LINKS = await Promise.all([
       fetchData("link_ar"),
-      fetchData("link_tv"),
-      fetchData("link_hg"),
+      // fetchData("link_tc"),
+      // fetchData("link_hg"),
     ]);
 
-    setIcon((prev) => ICON);
+    // setIcon((prev) => ICON);
     setTrip((prev) => TRIP);
-    setPassenger((prev) => PASSENGER);
-    setPassenger_ov((prev) => PASSENGER_OV);
-    setPassenger_dv((prev) => PASSENGER_DV);
+
     setBuilding((prev) => BUILDING);
     setBuildingVertiport((prev) => BUILDING_VERTIPORT);
-    setNodes((prev) => NODES);
-    setLinks((prev) => LINKS);
 
-    setSNodes((prev) => SNODES.flat());
-    setSLinks((prev) => SLINKS.flat());
+    setNodes((prev) => NODES.flat());
+    setLinks((prev) => LINKS.flat());
 
     setIsLoaded(true);
   }, []);

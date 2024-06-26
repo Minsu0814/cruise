@@ -6,10 +6,16 @@ import {Map} from 'react-map-gl';
 
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import {TripsLayer} from '@deck.gl/geo-layers';
-import {IconLayer,LineLayer, PolygonLayer, ScatterplotLayer, PathLayer} from "@deck.gl/layers";
+import {
+  // IconLayer,
+  LineLayer, 
+  PolygonLayer, 
+  // ScatterplotLayer, 
+  // PathLayer
+} from "@deck.gl/layers";
 
 import Slider from "@mui/material/Slider";
-import legend from "../image/legend.png";
+// import legend from "../image/legend.png";
 import "../css/trip.css";
 
 
@@ -58,12 +64,12 @@ const INITIAL_VIEW_STATE = {
   bearing: 0
 };
 
-const ICON_MAPPING = {
-    marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
-};
+// const ICON_MAPPING = {
+//     marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
+// };
 
 const minTime = 0;
-const maxTime = 250;
+const maxTime = 1100;
 const animationSpeed = 1;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
@@ -106,10 +112,10 @@ const Trip = (props) => {
   const [animation] = useState({});
 
   // const icon = props.icon;
-  const trip = props.trip;
+  const trip = currData(props.trip, time);
 
   const building = props.building;
-  // const building_vertiport = props.building_vertiport;
+  const building_vertiport = props.building_vertiport;
 
   const nodes = props.nodes;
   const links = props.links;
