@@ -1,0 +1,74 @@
+[
+	{
+		"source": "HG001_v",
+		"target": "Hg001"
+	},
+	{
+		"source": "Hg001",
+		"target": "Hg002"
+	},
+	{
+		"source": "Hg002",
+		"target": "Hg003"
+	},
+	{
+		"source": "Hg003",
+		"target": "Hg004"
+	},
+	{
+		"source": "Hg004",
+		"target": "HG001_v"
+	},
+	{
+		"source": "Hg003",
+		"target": "HG005"
+	},
+	{
+		"source": "HG005",
+		"target": "HG005_v"
+	},
+	{
+		"source": "HG005_v",
+		"target": "Hg006"
+	},
+	{
+		"source": "Hg006",
+		"target": "Hg007"
+	},
+	{
+		"source": "Hg007",
+		"target": "HG007_JP1"
+	},
+	{
+		"source": "HG007_JP1",
+		"target": "HG007_JP2"
+	},
+	{
+		"source": "HG007_JP2",
+		"target": "HG007_JP3"
+	},
+	{
+		"source": "HG007_JP3",
+		"target": "Hg008"
+	},
+	{
+		"source": "Hg008",
+		"target": "Hg009"
+	},
+	{
+		"source": "Hg009",
+		"target": "Hg009_v"
+	},
+	{
+		"source": "Hg009_v",
+		"target": "Hg0011"
+	},
+	{
+		"source": "Hg0011",
+		"target": "Hg0010"
+	},
+	{
+		"source": "Hg0010",
+		"target": "Hg007_JP3"
+	}
+]
