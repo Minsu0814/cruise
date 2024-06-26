@@ -43,7 +43,7 @@ const App = () => {
     const LINKS = await Promise.all([
       fetchData("link_ar"),
       fetchData("link_tc"),
-      fetchData("link_hg"),
+      // fetchData("link_hg"),
     ]);
 
     // setIcon((prev) => ICON);
