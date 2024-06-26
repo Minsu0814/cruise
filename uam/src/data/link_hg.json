@@ -1,26 +1,30 @@
 [
 	{
-		"source": "HG007_JP3",
-		"target": "HG008"
+		"source": "HG003",
+		"target": "HG005"
 	},
 	{
-		"source": "HG008",
-		"target": "HG009"
+		"source": "HG005",
+		"target": "HG005_v"
 	},
 	{
-		"source": "HG009",
-		"target": "HG009_v"
+		"source": "HG005_v",
+		"target": "HG006"
 	},
 	{
-		"source": "HG009_v",
-		"target": "HG011"
+		"source": "HG006",
+		"target": "HG007"
 	},
 	{
-		"source": "HG011",
-		"target": "HG010"
+		"source": "HG007",
+		"target": "HG007_JP1"
 	},
 	{
-		"source": "HG010",
+		"source": "HG007_JP1",
+		"target": "HG007_JP2"
+	},
+	{
+		"source": "HG007_JP2",
 		"target": "HG007_JP3"
 	}
 ]
