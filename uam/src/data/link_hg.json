@@ -38,5 +38,9 @@
 	{
 		"source": "HG011",
 		"target": "HG010"
+	},
+	{
+		"source": "HG010",
+		"target": "HG007_JP3"
 	}
 ]
