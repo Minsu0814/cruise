@@ -20,7 +20,7 @@
 		"target": "HG001_v"
 	},
 	{
-		"source": "Hg003",
+		"source": "HG003",
 		"target": "HG005"
 	},
 	{
@@ -61,10 +61,10 @@
 	},
 	{
 		"source": "HG009_v",
-		"target": "HG0011"
+		"target": "HG011"
 	},
 	{
-		"source": "HG0011",
-		"target": "HG0010"
+		"source": "HG011",
+		"target": "HG010"
 	}
 ]
