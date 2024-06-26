@@ -10,7 +10,7 @@ import {
   // IconLayer,
   LineLayer, 
   PolygonLayer, 
-  // ScatterplotLayer, 
+  ScatterplotLayer, 
   // PathLayer
 } from "@deck.gl/layers";
 
@@ -180,6 +180,16 @@ const Trip = (props) => {
       auto_highlight: true,
       // picking_radius: 10,
       widthMinPixels: 3,
+    }),
+
+    new ScatterplotLayer({
+      id: 'scatterplot-layer',
+      data: nodes,
+      getPosition: d => d.coordinates,
+      getFillColor: [255, 0, 0],
+      getRadius: d => 100, // Adjust the radius as needed
+      pickable: true,
+      opacity: 0.8,
     }),
 
     // 건물 

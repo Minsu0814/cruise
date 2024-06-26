@@ -1,22 +1,22 @@
 [
 	{
 		"source": "HG001_v",
-		"target": "Hg001"
+		"target": "HG001"
 	},
 	{
-		"source": "Hg001",
-		"target": "Hg002"
+		"source": "HG001",
+		"target": "HG002"
 	},
 	{
-		"source": "Hg002",
-		"target": "Hg003"
+		"source": "HG002",
+		"target": "HG003"
 	},
 	{
-		"source": "Hg003",
-		"target": "Hg004"
+		"source": "HG003",
+		"target": "HG004"
 	},
 	{
-		"source": "Hg004",
+		"source": "HG004",
 		"target": "HG001_v"
 	},
 	{
@@ -29,14 +29,14 @@
 	},
 	{
 		"source": "HG005_v",
-		"target": "Hg006"
+		"target": "HG006"
 	},
 	{
-		"source": "Hg006",
-		"target": "Hg007"
+		"source": "HG006",
+		"target": "HG007"
 	},
 	{
-		"source": "Hg007",
+		"source": "HG007",
 		"target": "HG007_JP1"
 	},
 	{
@@ -49,26 +49,22 @@
 	},
 	{
 		"source": "HG007_JP3",
-		"target": "Hg008"
+		"target": "HG008"
 	},
 	{
-		"source": "Hg008",
-		"target": "Hg009"
+		"source": "HG008",
+		"target": "HG009"
 	},
 	{
-		"source": "Hg009",
-		"target": "Hg009_v"
+		"source": "HG009",
+		"target": "HG009_v"
 	},
 	{
-		"source": "Hg009_v",
-		"target": "Hg0011"
+		"source": "HG009_v",
+		"target": "HG0011"
 	},
 	{
-		"source": "Hg0011",
-		"target": "Hg0010"
-	},
-	{
-		"source": "Hg0010",
-		"target": "Hg007_JP3"
+		"source": "HG0011",
+		"target": "HG0010"
 	}
 ]

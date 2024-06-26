@@ -36,13 +36,13 @@ const App = () => {
 
     const NODES = await Promise.all([
       fetchData("node_ar"),
-      // fetchData("node_tc"),
-      // fetchData("node_hg"),
+      fetchData("node_tc"),
+      fetchData("node_hg"),
     ]);
 
     const LINKS = await Promise.all([
       fetchData("link_ar"),
-      // fetchData("link_tc"),
+      fetchData("link_tc"),
       // fetchData("link_hg"),
     ]);
 
