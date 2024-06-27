@@ -19,6 +19,8 @@ const App = () => {
 
   const [trip, setTrip] = useState([]);
 
+  const [vertiport, setVertiport] = useState([]);
+
 
   const [building, setBuilding] = useState([]);
   const [building_vertiport, setBuildingVertiport] = useState([]);
@@ -33,6 +35,7 @@ const App = () => {
     const TRIP = await fetchData("trip");
     const BUILDING = await fetchData("buildings");
     const BUILDING_VERTIPORT = await fetchData("building_vertiport");
+    const VERTIPORT = await fetchData("vertiport_new");
 
     const NODES = await Promise.all([
       fetchData("node_ar"),
@@ -51,6 +54,8 @@ const App = () => {
 
     setBuilding((prev) => BUILDING);
     setBuildingVertiport((prev) => BUILDING_VERTIPORT);
+
+    setVertiport((prev) => VERTIPORT);
 
     setNodes((prev) => NODES.flat());
     setLinks((prev) => LINKS.flat());
@@ -71,8 +76,11 @@ const App = () => {
               trip={trip}
               nodes={nodes}
               links={links} 
+
               building={building}
               building_vertiport={building_vertiport}
+
+              vertiport={vertiport}
 
               // icon={icon}
 

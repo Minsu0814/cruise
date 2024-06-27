@@ -117,6 +117,8 @@ const Trip = (props) => {
   const building = props.building;
   const building_vertiport = props.building_vertiport;
 
+  const vertiport = props.vertiport;
+
   const nodes = props.nodes;
   const links = props.links;
 
@@ -185,6 +187,16 @@ const Trip = (props) => {
     new ScatterplotLayer({
       id: 'scatterplot-layer',
       data: nodes,
+      getPosition: d => d.coordinates,
+      getFillColor: [255, 0, 0],
+      getRadius: d => 100, // Adjust the radius as needed
+      pickable: true,
+      opacity: 0.8,
+    }),
+
+    new ScatterplotLayer({
+      id: 'scatterplot-layer',
+      data: vertiport,
       getPosition: d => d.coordinates,
       getFillColor: [255, 0, 0],
       getRadius: d => 100, // Adjust the radius as needed

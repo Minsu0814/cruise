@@ -1,52 +1,82 @@
-{
-	"\ub4dc\ub860\uc2dc\ud5d8_\uc778\uc99d\uc13c\ud130(\uc778\ucc9c \uccad\ub77c\ub3d9)": [
-		126.6231,
-		37.564241,
-		100
-	],
-	"\uacc4\uc591\uc2e0\ub3c4\uc2dc_uam\ubc84\ud2f0\ud3ec\ud2b8(\uc778\ucc9c \ubc15\ucd0c\ub3d9)": [
-		126.761229,
-		37.54389,
-		100
-	],
-	"\uc7a0\uc2e4\ud55c\uac15\uacf5\uc6d0(\uc11c\uc6b8 \uc7a0\uc2e47\ub3d9)": [
-		127.072635,
-		37.519354,
-		100
-	],
-	"\uc218\uc11c\uc5ed(\uc11c\uc6b8 \uc218\uc11c\ub3d9)": [
-		127.099981,
-		37.487888,
-		100
-	],
-	"\uace0\uc591\ud0a8\ud14d\uc2a4_uam\ubc84\ud2f0\ud3ec\ud2b8(\uc77c\uc0b0\uc11c\uad6c \uc1a1\ud3ec\ub3d9)": [
-		126.736558,
-		37.665936,
-		100
-	],
-	"\uae40\ud3ec\uacf5\ud56d_\ubc84\ud2f0\ud3ec\ud2b8(\uc11c\uc6b8 \ubc29\ud654\ub3d9)": [
-		126.80551,
-		37.55934,
-		100
-	],
-	"\uc5ec\uc758\ub3c4\uacf5\uc6d0\ud5ec\uae30\uc7a5(\uc11c\uc6b8 \uc2e0\uae38\ub3d9)": [
-		126.921353,
-		37.525359,
-		100
-	],
-	"\uc11c\ucd08\ub3d9_\ubcf5\ud569_\ube4c\ub529_\ud5ec\uae30\uc7a5(\uc11c\uc6b8 \uc5ed\uc0bc1\ub3d9)": [
-		127.0271,
-		37.496704,
-		100
-	],
-	"\ud604\ub300\uc790\ub3d9\ucc28_\ubcf8\uc0ac_\uc625\uc0c1\ud5ec\uae30\uc7a5(\uc11c\uc6b8 \uc591\uc7ac\ub3d9)": [
-		127.043143,
-		37.464708,
-		100
-	],
-	"LG\uc0ac\uc774\uc5b8\uc2a4\ud30c\ud06c_\uc625\uc0c1\ud5ec\uae30\uc7a5(\uc11c\uc6b8 \uac00\uc5911\ub3d9)": [
-		126.831283,
-		37.563658,
-		100
-	]
-}
+[
+	{
+		"name": "AR001_v",
+		"coordinates": [
+			126.6231,
+			37.564241,
+			90
+		]
+	},
+	{
+		"name": "AR002_v",
+		"coordinates": [
+			126.761229,
+			37.54389,
+			90
+		]
+	},
+	{
+		"name": "AR003_v",
+		"coordinates": [
+			127.072635,
+			37.519354,
+			90
+		]
+	},
+	{
+		"name": "AR004_v",
+		"coordinates": [
+			127.099981,
+			37.487888,
+			90
+		]
+	},
+	{
+		"name": "AR005_v",
+		"coordinates": [
+			126.736558,
+			37.665936,
+			90
+		]
+	},
+	{
+		"name": "AR006_v",
+		"coordinates": [
+			126.80551,
+			37.55934,
+			90
+		]
+	},
+	{
+		"name": "AR007_v",
+		"coordinates": [
+			126.921353,
+			37.525359,
+			90
+		]
+	},
+	{
+		"name": "AR008_v",
+		"coordinates": [
+			127.0271,
+			37.496704,
+			90
+		]
+	},
+	{
+		"name": "AR009_v",
+		"coordinates": [
+			127.043143,
+			37.464708,
+			90
+		]
+	},
+	{
+		"name": "AR010_v",
+		"coordinates": [
+			126.831283,
+			37.563658,
+			90
+		]
+	}
+]
