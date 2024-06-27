@@ -50,8 +50,6 @@ def create_random_point_based_on_place(place, CNT):   #place : 관심지역,  cn
     return geometry_geometry_locations
 
 
-
-
 def get_OD_data_pairs(vertiport, pairs, num=10):
     OD_data = []
     
@@ -134,6 +132,8 @@ def timestamp_change(ps_OO, uam_OD, ps_DD) :
     for i in range(len(ps_OO)):
         
         randum_num = sample_interval(0, 1000, 100, 7)
+        randum_num = [num / 6 for num in randum_num]
+        
         ps_OO[i]['timestamp'] = list(ps_OO[i]['timestamp'] + np.array(randum_num[i]))
         
         ps_OO_last = ps_OO[i]['timestamp'][-1]

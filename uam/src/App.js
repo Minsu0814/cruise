@@ -42,12 +42,14 @@ const App = () => {
       fetchData("node_ar"),
       fetchData("node_tc"),
       fetchData("node_hg"),
+      fetchData("node_hp"),
     ]);
 
     const LINKS = await Promise.all([
       fetchData("link_ar"),
       fetchData("link_tc"),
       fetchData("link_hg"),
+      fetchData("link_hp"),
     ]);
 
     // setIcon((prev) => ICON);
@@ -76,7 +78,7 @@ const App = () => {
 
               trip={trip}
               passenger={passenger} 
-              
+
               nodes={nodes}
               links={links} 
 
