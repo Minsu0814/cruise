@@ -112,8 +112,8 @@ const Trip = (props) => {
   const [animation] = useState({});
 
   // const icon = props.icon;
-  const trip = currData(props.trip, time);
-
+  const trip = props.trip;
+  const ps = currData(props.passenger, time);
   const building = props.building;
   const building_vertiport = props.building_vertiport;
 
@@ -153,6 +153,20 @@ const Trip = (props) => {
     //   radiusMinPixels: 2,
     //   radiusMaxPixels: 2,
     // }),
+
+    new TripsLayer({  
+      id: 'trips',
+      data: ps,
+      getPath: d => d.route,
+      getTimestamps: d => d.timestamp,
+      getColor: [255, 255, 50],
+      opacity: 0.7,
+      widthMinPixels: 3,
+      rounded: true,
+      trailLength : 0.5,
+      currentTime: time,
+      shadowEnabled: false
+    }),
 
     new TripsLayer({  
       id: 'trips',

@@ -18,7 +18,7 @@ const App = () => {
   // const [icon, setIcon] = useState([]);
 
   const [trip, setTrip] = useState([]);
-
+  const [passenger, setPassenger] = useState([]);
   const [vertiport, setVertiport] = useState([]);
 
 
@@ -33,6 +33,7 @@ const App = () => {
   const getData = useCallback(async () => {
     // const ICON = await fetchData("icon_data");
     const TRIP = await fetchData("trip");
+    const PASSENGER = await fetchData("ps");
     const BUILDING = await fetchData("buildings");
     const BUILDING_VERTIPORT = await fetchData("building_vertiport");
     const VERTIPORT = await fetchData("vertiport_new");
@@ -51,7 +52,7 @@ const App = () => {
 
     // setIcon((prev) => ICON);
     setTrip((prev) => TRIP);
-
+    setPassenger((prev) => PASSENGER);
     setBuilding((prev) => BUILDING);
     setBuildingVertiport((prev) => BUILDING_VERTIPORT);
 
@@ -74,6 +75,8 @@ const App = () => {
         <Trip 
 
               trip={trip}
+              passenger={passenger} 
+              
               nodes={nodes}
               links={links} 
 
