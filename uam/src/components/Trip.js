@@ -184,15 +184,15 @@ const Trip = (props) => {
       widthMinPixels: 3,
     }),
 
-    new ScatterplotLayer({
-      id: 'scatterplot-layer',
-      data: nodes,
-      getPosition: d => d.coordinates,
-      getFillColor: [255, 0, 0],
-      getRadius: d => 100, // Adjust the radius as needed
-      pickable: true,
-      opacity: 0.8,
-    }),
+    // new ScatterplotLayer({
+    //   id: 'scatterplot-layer',
+    //   data: nodes,
+    //   getPosition: d => d.coordinates,
+    //   getFillColor: [255, 0, 0],
+    //   getRadius: d => 100, // Adjust the radius as needed
+    //   pickable: true,
+    //   opacity: 0.8,
+    // }),
 
     new ScatterplotLayer({
       id: 'scatterplot-layer',
