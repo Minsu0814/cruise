@@ -36,7 +36,7 @@ const App = () => {
     const PASSENGER = await fetchData("ps");
     const BUILDING = await fetchData("buildings");
     const BUILDING_VERTIPORT = await fetchData("building_vertiport");
-    const VERTIPORT = await fetchData("vertiport_new");
+    const VERTIPORT = await fetchData("vertiport_location");
 
     const NODES = await Promise.all([
       fetchData("node_ar"),

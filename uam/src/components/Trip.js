@@ -69,7 +69,7 @@ const INITIAL_VIEW_STATE = {
 // };
 
 const minTime = 0;
-const maxTime = 1100;
+const maxTime = 240;
 const animationSpeed = 1;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
@@ -191,7 +191,7 @@ const Trip = (props) => {
       getTargetPosition: d => nodes.find(node => node.name === d.target).coordinates,
       getColor: [200,200,200],
       // getColor: [255, 255 ,255],
-      opacity : 0.2 ,
+      opacity : 0.1 ,
       highlight_color: [255, 255, 0],
       auto_highlight: true,
       // picking_radius: 10,
