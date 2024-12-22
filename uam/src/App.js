@@ -6,7 +6,6 @@ import Splash from "./components/Splash";
 import Trip from "./components/Trip";
 import "./css/app.css";
 
-
 const fetchData = (fileName) => {
   const baseURL = process.env.NODE_ENV === "production"
     ? `https://raw.githubusercontent.com/1023sherry/UAM_NEW/main/uam/src/data/`
@@ -23,9 +22,15 @@ const App = () => {
 
   const getData = useCallback(async () => {
 
-    const TRIP = await fetchData("trip");
+    // const TRIP = await fetchData("trip");
 
-    setTrip((prev) => TRIP);
+    const TRIP = await Promise.all([
+      fetchData("trip"),
+      fetchData("trip2"),
+      fetchData("trip3"),
+    ]);
+
+    setTrip((prev) => TRIP.flat());
 
     setIsLoaded(true);
   }, []);
