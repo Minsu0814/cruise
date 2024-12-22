@@ -68,8 +68,8 @@ const INITIAL_VIEW_STATE = {
 //     marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
 // };
 
-const minTime = 0;
-const maxTime = 240;
+const minTime = 1110;
+const maxTime = 1510;
 const animationSpeed = 1;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
@@ -113,14 +113,14 @@ const Trip = (props) => {
 
   // const icon = props.icon;
   const trip = props.trip;
-  const ps = currData(props.passenger, time);
-  const building = props.building;
-  const building_vertiport = props.building_vertiport;
+  // const ps = currData(props.passenger, time);
+  // const building = props.building;
+  // const building_vertiport = props.building_vertiport;
 
-  const vertiport = props.vertiport;
+  // const vertiport = props.vertiport;
 
-  const nodes = props.nodes;
-  const links = props.links;
+  // const nodes = props.nodes;
+  // const links = props.links;
 
 
 
@@ -156,7 +156,7 @@ const Trip = (props) => {
 
     new TripsLayer({  
       id: 'trips',
-      data: ps,
+      data: trip,
       getPath: d => d.route,
       getTimestamps: d => d.timestamp,
       getColor: [255, 255, 50],
@@ -168,36 +168,6 @@ const Trip = (props) => {
       shadowEnabled: false
     }),
 
-    new TripsLayer({  
-      id: 'trips',
-      data: trip,
-      getPath: d => d.route,
-      getTimestamps: d => d.timestamp,
-      getColor: [255, 0, 0],
-      opacity: 1,
-      widthMinPixels: 7,
-      rounded: true,
-      capRounded : true,
-      jointRounded : true,
-      trailLength : 0.5,
-      currentTime: time,
-      shadowEnabled: false
-    }),
-
-    new LineLayer({
-      id: 'line-layer',
-      data: links,
-      getSourcePosition: d => nodes.find(node => node.name === d.source).coordinates,
-      getTargetPosition: d => nodes.find(node => node.name === d.target).coordinates,
-      getColor: [200,200,200],
-      // getColor: [255, 255 ,255],
-      opacity : 0.1 ,
-      highlight_color: [255, 255, 0],
-      auto_highlight: true,
-      // picking_radius: 10,
-      widthMinPixels: 3,
-    }),
-
     // new ScatterplotLayer({
     //   id: 'scatterplot-layer',
     //   data: nodes,
@@ -207,41 +177,6 @@ const Trip = (props) => {
     //   pickable: true,
     //   opacity: 0.8,
     // }),
-
-    new ScatterplotLayer({
-      id: 'scatterplot-layer',
-      data: vertiport,
-      getPosition: d => d.coordinates,
-      getFillColor: [255, 0, 0],
-      getRadius: d => 100, // Adjust the radius as needed
-      pickable: true,
-      opacity: 0.8,
-    }),
-
-    // 건물 
-    new PolygonLayer({
-      id: 'buildings',
-      data: building,
-      extruded: true,
-      wireframe: false,
-      opacity: 0.5,
-      getPolygon: f => f.coordinates,
-      getElevation: f => f.height,
-      getFillColor: DEFAULT_THEME.buildingColor,
-      material: DEFAULT_THEME.material
-    }),
-
-    new PolygonLayer({
-      id: 'buildings',
-      data: building_vertiport,
-      extruded: true,
-      wireframe: false,
-      opacity: 0.01,
-      getPolygon: f => f.coordinates,
-      getElevation: f => f.height,
-      getFillColor: DEFAULT_THEME.buildingColor2,
-      material: DEFAULT_THEME.material2
-    })
   ];
   
   const SliderChange = (value) => {
