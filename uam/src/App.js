@@ -6,12 +6,20 @@ import Splash from "./components/Splash";
 import Trip from "./components/Trip";
 import "./css/app.css";
 
-const fetchData = (fileName) => {
-  const baseURL = process.env.NODE_ENV === "production"
-    ? `https://raw.githubusercontent.com/1023sherry/cruise/main/uam/src/data/`
-    : `${process.env.PUBLIC_URL}/data/`;
+// const fetchData = (fileName) => {
+//   const baseURL = process.env.NODE_ENV === "production"
+//     ? `https://raw.githubusercontent.com/1023sherry/cruise/main/uam/src/data/`
+//     : `${process.env.PUBLIC_URL}/data/`;
   
-  return axios.get(`${baseURL}${fileName}.json`).then((r) => r.data);
+//   return axios.get(`${baseURL}${fileName}.json`).then((r) => r.data);
+// };
+
+const fetchData = (FilE_NAME) => {
+  const res = axios.get(
+    `https://raw.githubusercontent.com/1023sherry/cruise/main/uam/src/data/${FilE_NAME}.json`
+  );
+  const data = res.then((r) => r.data);
+  return data;
 };
 
 const App = () => {
