@@ -8,7 +8,7 @@ import "./css/app.css";
 
 const fetchData = (fileName) => {
   const baseURL = process.env.NODE_ENV === "production"
-    ? `https://raw.githubusercontent.com/1023sherry/UAM_NEW/main/uam/src/data/`
+    ? `https://raw.githubusercontent.com/1023sherry/cruise/main/uam/src/data/`
     : `${process.env.PUBLIC_URL}/data/`;
   
   return axios.get(`${baseURL}${fileName}.json`).then((r) => r.data);
