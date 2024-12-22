@@ -7,15 +7,15 @@ import {Map} from 'react-map-gl';
 import {AmbientLight, PointLight, LightingEffect} from '@deck.gl/core';
 import {TripsLayer} from '@deck.gl/geo-layers';
 import {
-  // IconLayer,
+  IconLayer,
   LineLayer, 
   PolygonLayer, 
   ScatterplotLayer, 
-  // PathLayer
+  PathLayer
 } from "@deck.gl/layers";
 
 import Slider from "@mui/material/Slider";
-// import legend from "../image/legend.png";
+import legend from "../image/legend.png";
 import "../css/trip.css";
 
 
@@ -57,19 +57,19 @@ const DEFAULT_THEME = {
 };
 
 const INITIAL_VIEW_STATE = { 
-  longitude: 126.98, // 126.98 , -74
-  latitude: 37.57, // 37.57 , 40.72
-  zoom: 10,
-  pitch: 45,
+  longitude: 126.578758, // 126.98 , -74
+  latitude: 37.471559, // 37.57 , 40.72
+  zoom: 7,
+  pitch: 0,
   bearing: 0
 };
 
-// const ICON_MAPPING = {
-//     marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
-// };
+const ICON_MAPPING = {
+    marker: { x: 0, y: 0, width: 128, height: 128, mask: true },
+};
 
-const minTime = 1110;
-const maxTime = 2610;
+const minTime = 1050;
+const maxTime = 2630;
 const animationSpeed = 1;
 const mapStyle = "mapbox://styles/spear5306/ckzcz5m8w002814o2coz02sjc";
 const MAPBOX_TOKEN = `pk.eyJ1Ijoic2hlcnJ5MTAyNCIsImEiOiJjbG00dmtic3YwbGNoM2Zxb3V5NmhxZDZ6In0.ZBrAsHLwNihh7xqTify5hQ`;
@@ -111,8 +111,12 @@ const Trip = (props) => {
   const [time, setTime] = useState(minTime);
   const [animation] = useState({});
 
-  // const icon = props.icon;
   const trip = props.trip;
+  const trip_20 = props.trip_20;
+  const trip_40 = props.trip_40;
+
+  const icon = props.icon;
+  const line = props.line;
   // const ps = currData(props.passenger, time);
   // const building = props.building;
   // const building_vertiport = props.building_vertiport;
@@ -136,34 +140,75 @@ const Trip = (props) => {
 
   // 버티포트
   const layers = [
-    // new IconLayer({
-    //   id: "location",
-    //   data: icon,
-    //   sizeScale: 7,
-    //   iconAtlas:
-    //     "https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png",
-    //   iconMapping: ICON_MAPPING,
-    //   getIcon: d => "marker",
-    //   getSize: 2,
-    //   getPosition: d => d.coordinates,
-    //   getColor: d => d.color,
-    //   opacity: 1,
-    //   mipmaps: false,
-    //   pickable: true,
-    //   radiusMinPixels: 2,
-    //   radiusMaxPixels: 2,
-    // }),
+    new IconLayer({
+      id: "location",
+      data: icon,
+      sizeScale: 7,
+      iconAtlas:
+        "https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png",
+      iconMapping: ICON_MAPPING,
+      getIcon: d => "marker",
+      getSize: 2,
+      getPosition: d => d.coordinates,
+      // getColor: d => d.color,
+      getColor: [255, 255, 255],
+      opacity: 1,
+      mipmaps: false,
+      pickable: true,
+      radiusMinPixels: 2,
+      radiusMaxPixels: 2,
+    }),
 
     new TripsLayer({  
       id: 'trips',
       data: trip,
       getPath: d => d.route,
       getTimestamps: d => d.timestamp,
-      getColor: [255, 255, 50],
-      opacity: 0.7,
+      getColor: [255, 215, 0],
+      opacity: 1,
       widthMinPixels: 5,
       rounded: true,
-      trailLength : 1,
+      trailLength : 15,
+      currentTime: time,
+      shadowEnabled: false
+    }),
+
+    new TripsLayer({  
+      id: 'trips',
+      data: trip_20,
+      getPath: d => d.route,
+      getTimestamps: d => d.timestamp,
+      getColor: [135, 206, 235],
+      opacity: 1,
+      widthMinPixels: 5,
+      rounded: true,
+      trailLength : 15,
+      currentTime: time,
+      shadowEnabled: false
+    }),
+
+    new TripsLayer({  
+      id: 'trips',
+      data: trip_40,
+      getPath: d => d.route,
+      getTimestamps: d => d.timestamp,
+      getColor: [144, 238, 50],
+      opacity: 1,
+      widthMinPixels: 5,
+      rounded: true,
+      trailLength : 15,
+      currentTime: time,
+      shadowEnabled: false
+    }),
+    new PathLayer({
+      id: 'paths',
+      data: line,
+      getPath: d => d.path,
+      // getColor: d => d.color,
+      getColor: [240,240,240],
+      opacity: 0.01,
+      widthMinPixels: 3,
+      rounded: true,
       currentTime: time,
       shadowEnabled: false
     }),
@@ -205,7 +250,7 @@ const Trip = (props) => {
         onChange={SliderChange}
         track="inverted"
       />
-      {/* <img className="legend" src={legend} alt="legend" ></img> */}
+      <img className="legend" src={legend} alt="legend" ></img>
     </div>
   );
 };
