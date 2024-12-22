@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/cruise/static/css/main.18e11287.css",
-    "main.js": "/cruise/static/js/main.2789f82f.js",
+    "main.css": "/cruise/static/css/main.638cdd27.css",
+    "main.js": "/cruise/static/js/main.cebaa1dd.js",
     "static/js/483.5bf3b7c5.chunk.js": "/cruise/static/js/483.5bf3b7c5.chunk.js",
     "static/js/787.d37ee843.chunk.js": "/cruise/static/js/787.d37ee843.chunk.js",
     "service-worker.js": "/cruise/service-worker.js",
     "index.html": "/cruise/index.html",
-    "main.18e11287.css.map": "/cruise/static/css/main.18e11287.css.map",
-    "main.2789f82f.js.map": "/cruise/static/js/main.2789f82f.js.map",
+    "main.638cdd27.css.map": "/cruise/static/css/main.638cdd27.css.map",
+    "main.cebaa1dd.js.map": "/cruise/static/js/main.cebaa1dd.js.map",
     "483.5bf3b7c5.chunk.js.map": "/cruise/static/js/483.5bf3b7c5.chunk.js.map",
     "787.d37ee843.chunk.js.map": "/cruise/static/js/787.d37ee843.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18e11287.css",
-    "static/js/main.2789f82f.js"
+    "static/css/main.638cdd27.css",
+    "static/js/main.cebaa1dd.js"
   ]
 }
