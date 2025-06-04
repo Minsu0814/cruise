@@ -1,2 +1,2 @@
 # cruise
-[Simulaiton Site](https://mandu0814.github.io/cruise/)
+[Simulaiton Site](https://Minsu0814.github.io/cruise/)
